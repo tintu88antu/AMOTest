@@ -1,0 +1,18 @@
+<h3>{{title}}</h3>
+<form [formGroup]="textcheckForm" (ngSubmit)="onSubmit()" >
+    <div class="form-group" aria-orientation="horizontal">
+        <label>Text</label>
+        <input type="text" class="form-control" formControlName="text" required onchange="ClearOutput()">
+    </div>
+    <div class="form-group">
+        <label>Sub Text</label>
+        <input type="text" class="form-control" formControlName="subtext" required onchange="ClearOutput()">
+    </div>
+    <button type="submit" id="btnSubmit" [disabled]="!textcheckForm.valid"  class="btn btn-primary">Check</button>
+    <button type="button" (click)="clear()"> Clear</button>
+    <p>
+        {{output}}
+    </p>
+</form>
+
+

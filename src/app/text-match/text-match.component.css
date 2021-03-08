@@ -1,0 +1,64 @@
+/* ProfileEditorComponent's private CSS styles */
+:host {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  label {
+    display: block;
+    width: 6em;
+    margin: .5em 4em;
+    color: #607D8B;
+    font-weight: bold;
+  }
+  
+  input {
+    height: 2em;
+    font-size: 1em;
+    padding-left: .4em;
+    padding-top:.4em;
+  }
+  form{
+    position:absolute;
+    top:15%;
+    left:30%;
+    width:70%;  
+    border: 1px;  
+ }
+ p{
+    color: #607D8B;
+    font-weight: bold;
+ }
+ h3{
+    position:fixed;
+    top:5%;
+    left:33%;
+    width:30%;
+    color: #607D8B;
+    font-weight: bold;
+ }
+  button {
+    font-family: Arial, sans-serif;
+    background-color: #eee;
+    padding: 5px 20px ;
+    margin: .8em .2em;
+    align-self: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+  
