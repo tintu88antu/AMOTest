@@ -3,7 +3,7 @@ name: workflow name
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 jobs:
   build:
@@ -18,22 +18,15 @@ jobs:
           node-version: '14.x'
       - name: Install dependencies
         run: npm ci
-      - name: Build
+      - name: Clean Build Test 
         run: npm run build:ci
-      - name: Test
-        run: npm run test:ci
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
         with:
           name: deploy_dist
           path: dist
-      - name: Archive code coverage result
-        if: success()
-        uses: actions/upload-artifact@v1
-        with:
-          name: deploy_coverage
-          path: coverage
+      
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -45,8 +38,8 @@ jobs:
         with:
           name: deploy_dist
       - name: Deploy to GitHub Pages
-        uses: tintu88antu/github-pages-deploy-action@releases/v3
+        uses: tintu88antu.github.io/AMOTest@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: deploy_dist/AMOTest
+          FOLDER: ./root

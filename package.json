@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+     "clean": "rimraf ./dist",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
+    "build:prod": "ng build --prod --base-href https://tintu88antu.github.io/AMOTest/",
+    "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
+    "test:watch": "ng test",    "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:ci": "npm run clean && npm run test && npm run build:prod"
+    "build:ci": "npm run clean && npm run test && npm run build:prod",
+    "deploy": "ng build --prod --base-href=/AMOTest/"
+
 
   },
   "private": true,
