@@ -38,7 +38,7 @@ jobs:
         with:
           name: deploy_dist
       - name: Deploy to GitHub Pages
-        uses: tintu88antu.github.io/AMOTest/.@v3
+        uses: tintu88antu.github.io/AMOTest/
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
