@@ -18,10 +18,8 @@ jobs:
           node-version: '14.x'
       - name: Install dependencies
         run: npm ci
-      - name: Build
-        run: ng build
-      - name: Test
-        run: ng test
+      - name: Clean Build Test 
+        run: npm run build:ci
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
