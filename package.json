@@ -6,7 +6,7 @@
      "clean": "rimraf ./dist",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --prod --base-href "https://tintu88antu.github.io/AMOTest/,
+    "build:prod": "ng build --prod --base-href https://tintu88antu.github.io/AMOTest/",
     "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "test:watch": "ng test",    "lint": "ng lint",
     "e2e": "ng e2e",
